@@ -103,7 +103,6 @@
             android:configChanges="keyboardHidden|orientation"
             android:label="打断提示"
             android:launchMode="singleTop"
-            android:screenOrientation="portrait"
             android:theme="@style/Theme.Dialog.NoTitle.Translucent" />
         <activity
             android:name=".improve.account.activities.InputCodeActivity"

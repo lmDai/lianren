@@ -167,7 +167,7 @@ dependencies {
     implementation 'com.alibaba:fastjson:1.2.62'
     implementation 'com.github.limuyang2:LShadowLayout:1.0.3'
     //极光推送
-    implementation 'cn.jiguang.sdk:jpush:3.5.4'
+    implementation 'cn.jiguang.sdk:jpush:3.5.8'
     implementation 'cn.jiguang.sdk:jcore:2.2.8'
     //greendao
     //greendao

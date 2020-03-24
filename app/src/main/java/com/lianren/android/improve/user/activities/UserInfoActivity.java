@@ -2,7 +2,6 @@ package com.lianren.android.improve.user.activities;
 
 import android.content.Context;
 import android.content.Intent;
-import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v4.content.ContextCompat;
@@ -14,7 +13,6 @@ import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 import android.view.Gravity;
 import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -45,6 +43,7 @@ import com.lianren.android.util.ImageLoader;
 import com.lianren.android.util.StatusBarUtil;
 import com.lianren.android.util.pickimage.media.ImageGalleryActivity;
 import com.lianren.android.widget.RecycleViewDivider;
+import com.lianren.android.widget.SimplexToast;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 import com.scwang.smartrefresh.layout.api.RefreshHeader;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
@@ -60,7 +59,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.Bind;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 import cz.msebera.android.httpclient.Header;
 import de.hdodenhof.circleimageview.CircleImageView;
@@ -248,6 +246,8 @@ public class UserInfoActivity extends BackActivity implements UsersInfoContract.
     }
 
     private void getSelectorDialog() {
+        if (mList == null) return;
+        if (mList.base == null) return;
         final int contact_status = mList.base.contact_status;//0:陌生人 1:联系人 2:黑名单
         String contactStr = "屏蔽";
         if (contact_status == 0) {
@@ -407,6 +407,10 @@ public class UserInfoActivity extends BackActivity implements UsersInfoContract.
     @Override
     public void showUsersInfo(UsersInfoBean mList) {
         this.mList = mList;
+        if (mList == null) {
+            SimplexToast.show("该用户信息不存在");
+            finish();
+        }
         refreshLayout.finishRefresh();
         recyclerNote.setVisibility(mList.type == 1 ? View.VISIBLE : View.GONE);
         llApplyPair.setVisibility(mList.type == 1 ? View.GONE : View.VISIBLE);
@@ -510,6 +514,7 @@ public class UserInfoActivity extends BackActivity implements UsersInfoContract.
                 pairsApplyAdd(mList.base.id);
                 break;
             case R.id.avatar:
+                if (mList == null) return;
                 if (mList.photo != null && mList.photo.size() > 0) {
                     String[] photos = new String[mList.photo.size()];
                     for (int i = 0; i < mList.photo.size(); i++) {
