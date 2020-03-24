@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/layout_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:clickable="true"
+        android:descendantFocusability="blocksDescendants"
+        android:focusable="true"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/lay_12"
+        app:layout_scrollFlags="scroll">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center|start"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/lay_16"
+            android:paddingTop="@dimen/lay_16"
+            android:paddingBottom="@dimen/lay_12"
+            tools:ignore="RtlHardcoded,RtlSymmetry">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/img_avater"
+                android:layout_width="@dimen/size_20"
+                android:layout_height="@dimen/size_20"
+                android:src="@mipmap/ic_default_user"
+                app:civ_border_overlay="true" />
+
+            <TextView
+                android:id="@+id/tv_nick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/space_4"
+                android:gravity="center"
+                android:lines="1"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/imprint_content_color"
+                android:textSize="@dimen/font_12"
+                tools:text="Large Text" />
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/space_5"
+                android:gravity="center"
+                android:lines="1"
+                android:singleLine="true"
+                android:textColor="#9d9d9d"
+                android:textSize="@dimen/font_12"
+                tools:text="6分钟" />
+
+            <TextView
+                android:id="@+id/tv_hide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_material"
+                android:paddingLeft="@dimen/space_8"
+                android:paddingRight="@dimen/space_8"
+                android:text="隐藏"
+                android:textColor="#FFC3C3C3"
+                android:textSize="@dimen/font_12" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_ref"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/space_16"
+            android:paddingRight="@dimen/space_16">
+
+            <TextView
+                android:id="@+id/tv_ref_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:lineSpacingMultiplier="1.2"
+                android:textColor="#8C8C8C"
+                android:textSize="@dimen/font_14"
+                tools:text="生产环境MySQL快速备份工具XtraBackup使用案例MySQL 的备份有很多种方式，最常用的应该是MySQLdump了，将数据库导出一个 sql文件，还原的时候source db.sql 就欢快的执行了。小伙伴愉快的布上一个shell脚本，配上…" />
+
+            <LinearLayout
+                android:id="@+id/ll_image_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_12"
+                android:orientation="vertical" />
+
+            <com.zhy.view.flowlayout.TagFlowLayout
+                android:id="@+id/tag_flow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:textColor="@color/colorPrimary" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|start">
+
+                <LinearLayout
+                    android:id="@+id/ll_like"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/space_10">
+
+                    <ImageView
+                        android:id="@+id/img_like"
+                        android:layout_width="@dimen/space_16"
+                        android:layout_height="@dimen/space_16"
+                        android:src="@mipmap/icon_praise_blue" />
+
+                    <TextView
+                        android:id="@+id/tv_pick_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#CACACA"
+                        android:textSize="@dimen/font_10"
+                        tools:text="1" />
+                </LinearLayout>
+
+                <com.lianren.android.widget.LikesView
+                    android:id="@+id/likeView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/font_12" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View style="@style/h_line" />
+
+        <TextView
+            android:id="@+id/tv_comment_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/space_16"
+            android:layout_marginTop="@dimen/space_5"
+            android:textColor="#909090"
+            android:textSize="@dimen/font_12"
+            tools:text="回复 3" />
+    </LinearLayout>
+</LinearLayout>

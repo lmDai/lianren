@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#020202"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.lianren.android.widget.PageNumberPoint
+        android:id="@+id/page_number_point"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginTop="@dimen/space_10"
+        android:layout_marginBottom="@dimen/space_10"
+        android:paddingLeft="@dimen/space_16"
+        android:paddingRight="@dimen/space_16" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <com.lianren.android.widget.circle.ExpandTextView
+            android:id="@+id/tv_content"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_gravity="bottom"
+            android:background="@drawable/bg_print_text"
+            android:gravity="bottom"
+            android:padding="@dimen/space_16"
+            android:scrollbars="vertical"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_14"
+            tools:text="这个价钱不一定啊。那就买个油耗低那就买个油耗低的车那就买个油耗低的车那就买个油耗低的车那就买个油耗低的车那就买个油耗低的车那就买个油耗低的车那就买个油耗低的车那就买个油耗低的车那就买个油耗低的车那就买个油耗低的车那就买个油耗低的车的车，这样就 便宜很多了哈哈！这个价钱不一定啊。那就买个油耗低的车，这样就便宜很多了哈哈！" />
+    </LinearLayout>
+
+</RelativeLayout>

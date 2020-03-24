@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/App.Widget.Light.Toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_49"
+        android:layout_marginBottom="0dp"
+        android:background="@android:color/transparent"
+        android:titleTextColor="@color/black"
+        app:layout_collapseMode="pin"
+        app:navigationIcon="@mipmap/btn_back_dark_pressed"
+        app:popupTheme="@style/ToolbarPopupBlackTheme"
+        tools:ignore="UnusedAttribute" />
+
+    <View style="@style/h_line" />
+
+    <com.lianren.android.widget.userphoto.UserPhotoPreviewer
+        android:id="@+id/recycler_images"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/space_5"
+        tools:listitem="@layout/item_list_tweet_publish_selecter" />
+</LinearLayout>
+
+

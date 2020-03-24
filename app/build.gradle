@@ -1,0 +1,178 @@
+apply plugin: 'com.android.application'
+apply from: '../config/properties-util.gradle'
+apply plugin: 'org.greenrobot.greendao' // apply plugin
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    defaultConfig {
+        applicationId rootProject.ext.applicationId
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+        ndk {
+            //设置支持的SO库架构
+            abiFilters "armeabi-v7a", "arm64-v8a"
+        }
+        manifestPlaceholders = [
+                JPUSH_PKGNAME: rootProject.ext.applicationId,
+                JPUSH_APPKEY : "0e958797386b7b8368877ceb",//值来自开发者平台取得的AppKey
+                JPUSH_CHANNEL: "default_developer",
+        ]
+        javaCompileOptions { annotationProcessorOptions { includeCompileClasspath = true } }
+    }
+    signingConfigs {
+        debug {
+            storeFile file(RELEASE_STORE_FILE)
+            storePassword RELEASE_STORE_PASSWORD
+            keyAlias RELEASE_KEY_ALIAS
+            keyPassword RELEASE_KEY_PASSWORD
+        }
+        release {
+            storeFile file(RELEASE_STORE_FILE)
+            storePassword RELEASE_STORE_PASSWORD
+            keyAlias RELEASE_KEY_ALIAS
+            keyPassword RELEASE_KEY_PASSWORD
+        }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+    // 移除lint检查的error
+    lintOptions {
+        abortOnError false
+    }
+    //build type setting
+    buildTypes {
+        debug {
+            minifyEnabled true
+            shrinkResources true
+            zipAlignEnabled true
+            buildConfigField("String", "API_SERVER_URL", '"http://api.qileguai.com/;http://api.qileguai.com/"')
+            buildConfigField("String", "AES_KEY", '"http://api.qileguai.com/;http://api.qileguai.com/"')
+            buildConfigField("String", "API_URL", '"http://api.qileguai.com/%s"')
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
+        }
+        release {
+            buildConfigField("String", "API_SERVER_URL", '"http://api.lianren123.cn/;http://api.lianren123.cn/"')
+            buildConfigField("String", "AES_KEY", '"http://api.lianren123.cn/;http://api.lianren123.cn/"')
+            buildConfigField("String", "API_URL", '"http://api.lianren123.cn/%s"')
+            minifyEnabled true
+            shrinkResources true
+            zipAlignEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+    }
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+    greendao {
+        //数据库版本号
+        schemaVersion 1
+        // 设置DaoMaster、DaoSession、Dao 包名
+        daoPackage 'com.lianren.android.basicData.db'
+        //设置DaoMaster、DaoSession、Dao目录,请注意，这里路径用.不要用
+        targetGenDir 'src/main/java'
+        //设置为true以自动生成单元测试。
+        generateTests false
+        //应存储生成的单元测试的基本目录。默认为 src / androidTest / java。
+        targetGenDirTests 'src/main/java'
+    }
+    packagingOptions {
+        exclude 'META-INF/proguard/okhttp3.pro'
+//        exclude 'META-INF/XXX'
+//        exclude 'META-INF/XXX'
+//        exclude 'META-INF/XXX'
+    }
+}
+repositories {
+    flatDir {
+        dirs '../libs'
+    }
+    if (propertyHaveDebugCompile) {
+        maven {
+            url propertyDebugCompileUrl
+        }
+    }
+}
+
+dependencies {
+    implementation "com.android.support:support-v4:$rootProject.ext.supportVersion"
+    implementation "com.android.support:appcompat-v7:$rootProject.ext.supportVersion"
+    implementation "com.android.support:design:$rootProject.ext.supportVersion"
+    implementation "com.android.support:recyclerview-v7:$rootProject.ext.supportVersion"
+    implementation "com.android.support:cardview-v7:$rootProject.ext.supportVersion"
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    if (propertyHaveDebugCompile) {
+        compile propertyDebugCompile
+    }
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    implementation 'com.github.chrisbanes.photoview:library:1.2.4'
+    implementation 'com.loopj.android:android-async-http:1.4.9'
+    implementation 'com.jakewharton:butterknife:7.0.1'
+    implementation 'com.google.zxing:core:3.3.0'
+    implementation 'com.joanzapata.android:android-iconify:1.0.9'
+    implementation 'com.makeramen:roundedimageview:2.1.1'
+    implementation 'pub.devrel:easypermissions:0.3.0'
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+    implementation 'de.hdodenhof:circleimageview:2.0.0'
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation 'com.davemorrissey.labs:subsampling-scale-image-view:3.6.0'
+    implementation 'com.hyman:flowlayout-lib:1.1.2'
+    implementation('com.github.mcxtzhang:SwipeDelMenuLayout:V1.2.5') {
+        exclude group: 'com.android.support:appcompat-v7', module: 'support-v4'
+    }
+    testImplementation 'junit:junit:4.12'
+    implementation 'net.oschina.common:common:0.2.1'
+    //smartrefresh
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0'
+    //1.0.5及以前版本的老用户升级需谨慎，API改动过大
+    implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.0'
+    //没有使用特殊Header，可以不加这行
+    //adapter
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30'
+    //核心需要高斯模糊的库
+    implementation 'jp.wasabeef:glide-transformations:2.0.1'
+    implementation 'com.github.hackware1993:MagicIndicator:1.5.0'
+    implementation 'com.devzld:expandlayout:1.0.0'
+    //七牛云存储
+    implementation 'com.qiniu:qiniu-android-sdk:7.5.0'
+    //友盟分享
+    implementation project(':share')
+    implementation(name: 'alipaySdk-15.6.8-20191021122455-noUtdid', ext: 'aar')
+    //eventBus
+    implementation 'org.greenrobot:eventbus:3.1.1'
+    //阿里人面识别
+//    implementation(name: 'FaceLivenessOpen-2.1.6.15', ext: 'aar')
+//    implementation(name: 'NoCaptchaSDK-external-release-5.4.33', ext: 'aar')
+//    implementation(name: 'oss-android-sdk-2.9.2', ext: 'aar')
+//    implementation(name: 'rpsdk-3.0.0.5', ext: 'aar')
+//    implementation(name: 'SecurityBodySDK-external-release-5.4.79', ext: 'aar')
+//    implementation(name: 'SecurityGuardSDK-external-release-5.4.9901', ext: 'aar')
+
+    implementation (name:'rpsdk-3.3.0.1', ext:'aar')
+    implementation (name:'oss-android-sdk-2.9.2', ext:'aar')
+    implementation (name:'SecurityBodySDK-external-release-5.4.109-preInstall', ext:'aar')
+    implementation (name:'SecurityGuardSDK-external-release-5.4.187-preInstall', ext:'aar')
+
+    implementation 'com.contrarywind:Android-PickerView:+'
+    implementation 'com.alibaba:fastjson:1.2.62'
+    implementation 'com.github.limuyang2:LShadowLayout:1.0.3'
+    //极光推送
+    implementation 'cn.jiguang.sdk:jpush:3.5.4'
+    implementation 'cn.jiguang.sdk:jcore:2.2.8'
+    //greendao
+    //greendao
+    implementation 'org.greenrobot:greendao:3.2.2'
+    //数据库升级防止丢失数据
+    implementation 'io.github.yuweiguocn:GreenDaoUpgradeHelper:v2.2.1'
+}
+apply plugin: 'com.getkeepsafe.dexcount'

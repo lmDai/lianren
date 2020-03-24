@@ -1,0 +1,94 @@
+<resources>
+    <string name="app_name">链人</string>
+    <string name="you_have_unread_messages">你有%s条未读消息</string>
+    <!-- ==================主页底部导航按钮================== -->
+    <string name="main_tab_name_index">链人</string>
+    <string name="main_tab_name_explore">发现</string>
+    <string name="main_tab_name_my">我</string>
+    <string name="update">检查更新</string>
+    <string name="enter">确定</string>
+    <string name="copy">复制</string>
+    <string name="delete">删除</string>
+    <string name="delete_all">删除所有</string>
+    <string name="transmit">转发</string>
+    <string name="copy_success">复制成功</string>
+    <string name="deleting">正在删除…</string>
+    <string name="delete_success">删除成功</string>
+    <string name="delete_failed">删除失败</string>
+    <string name="loading">加载中…</string>
+    <string name="loading_no_more">已加载全部</string>
+    <string name="register_sms_wait_hint">别激动,休息一下呗&#8230;</string>
+    <!-- ==================权限申请对话框（alertdialog）================== -->
+    <string name="permission_dialog_title">权限申请</string>
+    <string name="permission_dialog_message">为了您能正常使用，需要以下权限</string>
+    <string name="tip_double_click_exit">再次点击退出链人</string>
+    <string name="write_print">写作印记</string>
+    <string-array name="synthesize_titles">
+        <item>匹配</item>
+        <item>消息</item>
+    </string-array>
+    <string name="year">年</string>
+    <string name="month">月</string>
+    <string name="day">日</string>
+    <string name="hour">时</string>
+    <string name="minute">分</string>
+    <!---登录-->
+    <string name="request_error_hint">网络请求失败,请重试&#8230;</string>
+    <string name="progress_submit">正在提交…</string>
+    <string name="login_register_hint">注册</string>
+    <string name="login">登录</string>
+    <string name="login_validate_code">验证码登录</string>
+    <string name="hint_password">密码</string>
+    <string name="login_input_username_hint">手机号</string>
+    <string name="message_username_null">手机号未填写！！！</string>
+    <string name="login_hold_hint">记住密码</string>
+    <string name="login_forget_hint">忘记密码？</string>
+    <string name="login_success_hint">登录成功</string>
+    <string name="login_input_username_hint_error">请输入正确的手机号&#8230;</string>
+    <string name="footer_type_net_error">网络错误</string>
+    <string name="error_view_no_data">暂无内容</string>
+    <string name="error_view_loading">加载中…</string>
+    <string name="error_view_loading_friend">数据初始化中…</string>
+    <string name="error_view_loading_local_friend">获取附近的程序员中…</string>
+    <string name="error_view_load_error_click_to_refresh">内容加载失败\n点击重新加载</string>
+    <string name="error_view_network_error_click_to_refresh">没有可用的网络</string>
+    <string name="tip_network_error">没有可用的网络</string>
+    <string name="expandHint">收起</string>
+    <string name="foldHint">查看全文</string>
+    <string name="state_network_error">网络错误</string>
+    <string name="state_loading">正在加载…</string>
+    <string name="state_not_more">没有更多数据</string>
+    <string name="state_load_error">加载失败</string>
+    <string name="state_refreshing">正在刷新</string>
+    <string name="state_load">正在加载…</string>
+    <string name="state_loading_error">数据加载中&#8230;</string>
+    <string name="state_submit">正在提交中&#8230;</string>
+    <string name="gallery_save_file_not_have_external_storage_permission">没有外部存储权限!</string>
+    <string name="gallery_save_file_not_have_external_storage">没有外部存储!</string>
+    <string name="gallery_save_file_success">保存成功!</string>
+    <string name="gallery_save_file_failed">存储失败!</string>
+    <string name="image_select_opt_done">完成</string>
+    <string name="image_select_opt_preview">预览</string>
+    <string name="tip_content_empty">内容不能为空</string>
+    <string name="tip_content_too_long">内容太长</string>
+    <string name="tweet_publishing">正在发布印记…</string>
+    <string name="tweet_publish_failed_hint">印记发布失败,请重试!!!</string>
+    <string name="tweet_retry_publishing_hint">正在重新发布印记中…</string>
+    <string name="tweet_publishing_toast">正在发布印记, 请留意通知栏。</string>
+    <string name="tweet_publish_success">印记发布成功~</string>
+    <string name="tweet_publish_failed">印记发布失败, 点击重新发送!</string>
+    <string name="tweet_image_wait">准备图片中…</string>
+    <string name="tweet_image_wait_failed">图片转存失败!</string>
+    <string name="tweet_image_publishing" formatted="false">发布图片中…%s</string>
+    <string name="tweet_image_publish_failed" formatted="false">发布图片失败-[%s/%s]</string>
+    <string name="comment_hint">请输入评论</string>
+    <string name="send_hint">发送</string>
+    <string name="send_tweet">发送</string>
+    <string name="setting_member_vip_desc">* 提供一对一的推荐，专注沟通\n* 根据资料和特征精确筛选\n* 资料认证，保证真实可靠\n* 沟通无障碍，信息直达</string>
+    <string name="setting_friend_single">我单身，寻找恋人</string>
+    <string name="setting_friend_disable">暂停匹配</string>
+    <string name="setting_friend_close">关闭资料</string>
+    <string name="search_keyword_empty_error">搜索关键字不能为空</string>
+    <string name="network_timeout_hint">网络请求超时...</string>
+    <string name="search_error">搜索失败</string>
+</resources>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        android:titleTextColor="@color/black"
+        app:navigationIcon="@mipmap/btn_back_dark_pressed"
+        app:popupTheme="@style/ToolbarPopupBlackTheme"
+        tools:ignore="UnusedAttribute" />
+
+    <View style="@style/h_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:background="#F4F4F4"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/space_16"
+            android:text="要求城市最多3个"
+            android:textColor="@color/day_colorPrimary"
+            android:textSize="@dimen/font_12" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="15dp">
+
+            <FrameLayout
+                android:id="@+id/fl_city1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/shape_button_entity_white_frame_corner"
+                android:minWidth="100dp"
+                android:minHeight="40dp">
+
+                <TextView
+                    android:id="@+id/tv_city1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:paddingRight="20dp"
+                    android:text="城市1" />
+
+                <ImageView
+                    android:id="@+id/iv_city1"
+                    android:layout_width="@dimen/size_20"
+                    android:layout_height="@dimen/size_20"
+                    android:layout_gravity="right"
+                    android:minWidth="15dp"
+                    android:src="@mipmap/close_ico" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/fl_city2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/shape_button_entity_white_frame_corner"
+                android:minWidth="100dp"
+                android:minHeight="40dp">
+
+                <TextView
+                    android:id="@+id/tv_city2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="5dp"
+                    android:paddingRight="20dp"
+                    android:text="城市2" />
+
+                <ImageView
+                    android:id="@+id/iv_city2"
+                    android:layout_width="@dimen/size_20"
+                    android:layout_height="@dimen/size_20"
+                    android:layout_gravity="right"
+                    android:minWidth="15dp"
+                    android:src="@mipmap/close_ico" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/fl_city3"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/shape_button_entity_white_frame_corner"
+                android:minWidth="100dp"
+                android:minHeight="40dp">
+
+                <TextView
+                    android:id="@+id/tv_city3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="5dp"
+                    android:paddingRight="20dp"
+                    android:text="城市3" />
+
+                <ImageView
+                    android:id="@+id/iv_city3"
+                    android:layout_width="@dimen/size_20"
+                    android:layout_height="@dimen/size_20"
+                    android:layout_gravity="right"
+                    android:minWidth="15dp"
+                    android:src="@mipmap/close_ico" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/fl_add"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/shape_button_entity_white_frame_corner"
+                android:minWidth="80dp"
+                android:minHeight="40dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:minWidth="15dp"
+                    android:src="@mipmap/add_small_ico" />
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

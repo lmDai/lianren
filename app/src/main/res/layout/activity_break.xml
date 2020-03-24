@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fl_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#15000000"
+    android:orientation="vertical"
+    tools:ignore="HardcodedText">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/lay_20"
+        android:layout_marginRight="@dimen/lay_20"
+        android:background="@drawable/bg_dialog">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:minHeight="215dp"
+            android:orientation="vertical"
+            tools:ignore="KeyboardInaccessibleWidget,UselessParent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/lay_16"
+                    android:gravity="center"
+                    android:text="升级到新版本"
+                    android:textColor="@color/tab_selected_color"
+                    android:textSize="@dimen/space_16" />
+
+                <TextView
+                    android:id="@+id/tv_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/lay_16"
+                    android:layout_marginRight="@dimen/lay_16"
+                    android:lineSpacingExtra="4dp"
+                    android:text="1、修复******** \n2、修复******** \n3、修复********"
+                    android:textColor="#666666"
+                    android:textSize="@dimen/font_12" />
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/btn_commit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/size_20"
+                android:background="@drawable/bg_btn_break"
+                android:minWidth="125dp"
+                android:minHeight="37dp"
+                android:textColor="@color/white"
+                tools:ignore="RtlHardcoded" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/img_close"
+            android:layout_width="@dimen/size_24"
+            android:layout_height="@dimen/size_24"
+            android:layout_gravity="right"
+            android:src="@mipmap/close_ico" />
+    </FrameLayout>
+</FrameLayout>

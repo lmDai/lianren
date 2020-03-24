@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_tag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/space_16"
+        android:layout_marginTop="@dimen/space_8"
+        android:layout_marginRight="@dimen/space_16"
+        android:lineSpacingExtra="@dimen/lay_2"
+        android:textColor="@color/day_colorPrimary"
+        android:textSize="@dimen/font_10"
+        tools:text="拥有才艺和技能" />
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/space_16"
+        android:layout_marginTop="@dimen/space_5"
+        android:layout_marginRight="@dimen/space_16"
+        android:layout_marginBottom="@dimen/size_20"
+        android:lineSpacingExtra="@dimen/lay_2"
+        android:textColor="@color/text_user_name_color"
+        android:textSize="@dimen/font_12"
+        tools:text="家里养了11条狗；
+别人的生离死别与我毫不相干，但你眉头只要轻皱一下我就无法坐视不管；" />
+</LinearLayout>

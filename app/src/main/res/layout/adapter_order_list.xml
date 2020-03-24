@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/space_10">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/space_16"
+            android:paddingRight="@dimen/space_13"
+            android:text="订单号:242464354"
+            android:textColor="#FFAAAAAA"
+            android:textSize="@dimen/font_10" />
+
+        <TextView
+            android:id="@+id/tv_create"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FFAAAAAA"
+            android:textSize="@dimen/font_10"
+            tools:text="订单号:242464354" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/space_8"
+        android:gravity="center|top"
+        android:paddingLeft="@dimen/space_16"
+        android:paddingRight="@dimen/space_16">
+
+        <com.lianren.android.widget.RoundImageView
+            android:id="@+id/img_image"
+            android:layout_width="99dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:maxHeight="230dp"
+            android:src="@mipmap/ic_squre_placeholder"
+            app:borderRadius="@dimen/space_4"
+            app:bottom_left="true"
+            app:bottom_right="true"
+            app:top_left="true"
+            app:top_right="true"
+            app:type="round" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/space_8"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/tab_selected_color"
+                android:textSize="@dimen/font_14"
+                tools:text="活动邀约 | 练吉他(尤克里里)下午茶小聚会以琴会友" />
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_6"
+                android:textColor="#FF6C6C6C"
+                android:textSize="@dimen/font_12"
+                tools:text="票券 8月25 16:30 ～ 8月26 18:30" />
+
+            <TextView
+                android:id="@+id/tv_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_8"
+                android:textColor="#FF6C6C6C"
+                android:textSize="@dimen/font_12"
+                tools:text="重庆渝北新人花园14号16栋13楼" />
+
+            <TextView
+                android:id="@+id/tv_good_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_10"
+                android:textColor="#FF6C6C6C"
+                android:textSize="@dimen/font_12"
+                tools:text="喝茶弹琴(商品名称)    2" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/space_8"
+        android:layout_marginBottom="8dp"
+        android:gravity="end|center"
+        android:paddingLeft="@dimen/space_16"
+        android:paddingRight="@dimen/space_16">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FF575656"
+            android:textSize="@dimen/font_12"
+            tools:text="25:23" />
+
+        <TextView
+            android:id="@+id/tv_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/space_8"
+            android:background="@drawable/bg_order_status"
+            android:gravity="center"
+            android:minWidth="65dp"
+            android:minHeight="30dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_10"
+            tools:text="待支付" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_16"
+        android:background="#F5F5F5" />
+</LinearLayout>

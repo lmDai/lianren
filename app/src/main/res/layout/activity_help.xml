@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/App.Widget.Light.Toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_49"
+        android:layout_marginBottom="0dp"
+        android:background="@color/white"
+        android:titleTextColor="@color/black"
+        app:layout_collapseMode="pin"
+        app:navigationIcon="@mipmap/btn_back_dark_pressed"
+        app:popupTheme="@style/ToolbarPopupBlackTheme"
+        tools:ignore="UnusedAttribute" />
+
+    <View style="@style/h_line" />
+
+
+    <LinearLayout
+        android:id="@+id/ll_feed_back"
+        style="@style/option_item_rl">
+
+        <TextView
+            style="@style/option_item_text"
+            android:text="反馈" />
+
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="10dp"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:contentDescription="@null"
+            android:src="@mipmap/ic_arrow_right" />
+    </LinearLayout>
+
+    <View
+        style="@style/h_line"
+        android:layout_height="1px"
+        android:background="@color/list_divider_color" />
+
+    <LinearLayout
+        android:id="@+id/ll_help"
+        style="@style/option_item_rl">
+
+        <TextView
+            style="@style/option_item_text"
+            android:text="帮助" />
+
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="10dp"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:contentDescription="@null"
+            android:src="@mipmap/ic_arrow_right" />
+    </LinearLayout>
+
+    <View
+        style="@style/h_line"
+        android:layout_height="1px"
+        android:background="@color/list_divider_color" />
+
+
+    <LinearLayout
+        android:id="@+id/ll_recommend"
+        style="@style/option_item_rl">
+
+        <TextView
+            style="@style/option_item_text"
+            android:text="推荐链人" />
+
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="10dp"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:contentDescription="@null"
+            android:src="@mipmap/ic_arrow_right" />
+    </LinearLayout>
+
+    <View
+        style="@style/h_line"
+        android:layout_height="1px"
+        android:background="@color/list_divider_color" />
+</LinearLayout>

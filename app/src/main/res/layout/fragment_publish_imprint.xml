@@ -1,0 +1,138 @@
+<net.oschina.common.widget.FitWindowFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".improve.explore.activities.PublishImprintActivity">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/layout_coordinator"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:layout_marginBottom="@dimen/lay_44"
+        android:background="@color/white"
+        android:paddingTop="25dp">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/layout_appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            app:elevation="0dp">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="@dimen/lay_16"
+                app:layout_scrollFlags="scroll|enterAlways">
+
+                <com.lianren.android.widget.RichEditText
+                    android:id="@+id/edit_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="start|left|top"
+                    android:hint="写下你的印记"
+                    android:minLines="4"
+                    android:paddingBottom="@dimen/lay_32"
+                    android:textColor="#111111"
+                    android:textSize="@dimen/font_14" />
+
+                <TextView
+                    android:id="@+id/txt_indicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/size_20"
+                    android:layout_gravity="bottom|right"
+                    android:background="@drawable/ic_tweet_indicator_selector"
+                    android:gravity="center"
+                    android:minWidth="@dimen/size_40"
+                    android:paddingLeft="@dimen/lay_8"
+                    android:paddingTop="0dp"
+                    android:paddingRight="@dimen/lay_8"
+                    android:paddingBottom="0dp"
+                    android:textColor="@color/tweet_indicator_text_color"
+                    android:textSize="14sp"
+                    android:visibility="invisible"
+                    tools:text="12" />
+
+            </FrameLayout>
+
+        </android.support.design.widget.AppBarLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/space_16"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <com.lianren.android.widget.TweetPicturesPreviewer
+                android:id="@+id/recycler_images"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/item_list_tweet_publish_selecter" />
+
+            <com.lianren.android.widget.tag.TagPickPreviewer
+                android:id="@+id/tag_pick"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_14"
+                tools:listitem="@layout/tag_publish_imprints" />
+
+            <CheckBox
+                android:id="@+id/check_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_13"
+                android:button="@null"
+                android:checked="true"
+                android:text="公开"
+                android:textColor="@color/primarybar_txt"
+                android:textSize="@dimen/font_14" />
+
+        </LinearLayout>
+    </android.support.design.widget.CoordinatorLayout>
+
+    <FrameLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingTop="25dp">
+
+        <ImageView
+            android:id="@+id/icon_back"
+            android:layout_width="?attr/actionBarSize"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@drawable/ic_material"
+            android:clickable="true"
+            android:scaleType="centerInside"
+            android:src="@mipmap/btn_back_dark_pressed"
+            tools:ignore="KeyboardInaccessibleWidget" />
+
+
+        <TextView
+            android:id="@+id/icon_send"
+            android:layout_width="?attr/actionBarSize"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_gravity="end"
+            android:layout_marginBottom="1dp"
+            android:background="@null"
+            android:gravity="center"
+            android:text="好了"
+            android:textAppearance="@style/TextAppearance.AppCompat.Menu"
+            android:textColor="@color/primarybar_txt"
+            android:textSize="@dimen/font_14"
+            tools:ignore="HardcodedText" />
+
+        <View
+            style="@style/h_line"
+            android:layout_gravity="bottom" />
+    </FrameLayout>
+
+
+</net.oschina.common.widget.FitWindowFrameLayout>

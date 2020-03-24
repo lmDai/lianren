@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/shape_search_view">
+
+            <EditText
+                android:id="@+id/edit_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:drawableLeft="@mipmap/ic_search"
+                android:drawablePadding="@dimen/space_5"
+                android:hint="请输入主题"
+                android:imeOptions="actionSearch"
+                android:maxLength="15"
+                android:paddingLeft="@dimen/space_14"
+                android:paddingRight="@dimen/space_5"
+                android:textColorHint="#989898"
+                android:textSize="@dimen/font_14" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tv_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:text="取消"
+            android:textColor="#A8A8A8"
+            android:textSize="@dimen/font_14"
+            tools:ignore="HardcodedText,RtlHardcoded" />
+    </LinearLayout>
+
+    <View style="@style/h_line" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/window_background">
+
+        <LinearLayout
+            android:id="@+id/ll_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_material"
+            android:padding="@dimen/space_16">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/space_5"
+                android:text="#"
+                android:textColor="@color/day_colorPrimary"
+                android:textSize="@dimen/font_14" />
+
+            <TextView
+                android:id="@+id/tv_content"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/tab_selected_color"
+                android:textSize="@dimen/font_14"
+                tools:text="你分手需要多久" />
+
+            <TextView
+                android:id="@+id/tag_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="立即创建"
+                android:textColor="#FF595959"
+                android:textSize="@dimen/font_14" />
+        </LinearLayout>
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/refreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/window_background"
+            android:visibility="gone"
+            app:srlEnableFooterFollowWhenLoadFinished="true"
+            app:srlEnableLoadMoreWhenContentNotFull="false"
+            app:srlEnableNestedScrolling="true"
+            app:srlEnableScrollContentWhenLoaded="true"
+            app:srlFooterTriggerRate="0"
+            app:srlHeaderMaxDragRate="2.0">
+
+            <com.scwang.smartrefresh.layout.header.ClassicsHeader
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                app:srlTextSizeTime="@dimen/font_8"
+                app:srlTextSizeTitle="@dimen/font_10" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+    </FrameLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/space_10">
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_6"
+        android:textColor="#C2C2C2"
+        android:textSize="@dimen/font_10"
+        tools:text="昨天" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_5"
+
+        android:paddingLeft="7dp"
+
+        android:paddingRight="38dp">
+
+        <ImageView
+            android:layout_width="@dimen/size_32"
+            android:layout_height="@dimen/size_32"
+            android:background="@drawable/bg_system"
+            android:padding="@dimen/space_4"
+            android:src="@mipmap/ic_system_white" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/space_8"
+            android:layout_weight="1"
+            android:background="@drawable/bg_dialog"
+            android:minHeight="75dp"
+            android:orientation="vertical"
+            android:padding="@dimen/space_10">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/day_colorPrimary"
+                android:textSize="@dimen/font_12"
+                tools:text="推荐活动 | 中国当代舞蹈双年展 《没有大象" />
+
+            <TextView
+                android:id="@+id/tv_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_5"
+                android:ellipsize="end"
+                android:maxLength="50"
+                android:textColor="#6C6C6C"
+                android:textSize="@dimen/font_12"
+                tools:text="推荐活动 | 中国当代舞蹈双年展 《没有大象" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

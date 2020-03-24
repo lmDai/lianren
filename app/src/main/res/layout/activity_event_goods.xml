@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/App.Widget.Light.Toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_49"
+        android:layout_marginBottom="0dp"
+        android:background="@android:color/transparent"
+        android:titleTextColor="@color/black"
+        app:layout_collapseMode="pin"
+        app:navigationIcon="@mipmap/btn_back_dark_pressed"
+        app:popupTheme="@style/ToolbarPopupBlackTheme"
+        tools:ignore="UnusedAttribute" />
+
+    <View style="@style/h_line" />
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#F5F5F5"
+        app:srlEnableFooterFollowWhenLoadFinished="true"
+        app:srlEnableLoadMore="false"
+        app:srlEnableLoadMoreWhenContentNotFull="false"
+        app:srlEnableNestedScrolling="true"
+        app:srlEnableScrollContentWhenLoaded="true"
+        app:srlFooterTriggerRate="0"
+        app:srlHeaderMaxDragRate="2.0">
+
+        <com.scwang.smartrefresh.layout.header.ClassicsHeader
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            app:srlTextSizeTime="@dimen/font_8"
+            app:srlTextSizeTitle="@dimen/font_10" />
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:padding="@dimen/space_16">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|start">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/img_avater"
+                            android:layout_width="@dimen/size_32"
+                            android:layout_height="@dimen/size_32"
+                            android:src="@mipmap/ic_default_image"
+                            app:civ_border_overlay="true" />
+
+                        <TextView
+                            android:id="@+id/tv_nickname"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/space_5"
+                            android:textColor="@color/tab_selected_color"
+                            android:textSize="@dimen/font_12"
+                            tools:text="贝恩" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_5"
+                        android:textColor="@color/tab_selected_color"
+                        android:textSize="@dimen/font_14"
+                        tools:text="张北驴咖啡书屋" />
+
+                    <TextView
+                        android:id="@+id/tv_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_10"
+                        android:textColor="@color/tab_selected_color"
+                        android:textSize="@dimen/font_12"
+                        tools:text="渝北区红警大道57号A栋23楼微锐空间" />
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycler_goods"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_10"
+                    android:layout_marginBottom="@dimen/space_4"
+                    android:nestedScrollingEnabled="false" />
+
+                <LinearLayout
+                    android:id="@+id/ll_choose_time"
+                    style="@style/option_item_rl">
+
+                    <ImageView
+                        android:layout_width="@dimen/space_15"
+                        android:layout_height="@dimen/space_15"
+                        android:src="@mipmap/time_ico" />
+
+                    <TextView
+                        android:id="@+id/tv_select_time"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/space_5"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical|start"
+                        android:text="选择邀约时间"
+                        android:textColor="@color/tab_selected_color"
+                        android:textSize="@dimen/font_12" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/ic_drop_down" />
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/space_16" />
+
+        <Button
+            android:id="@+id/btn_status"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_event_status"
+            android:minWidth="126dp"
+            android:text="发起邀约"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_14" />
+    </LinearLayout>
+</LinearLayout>

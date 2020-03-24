@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/viewStatusBar"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:background="@color/white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_49"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingRight="@dimen/space_16"
+        android:paddingLeft="@dimen/space_16">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="发现"
+            android:textColor="@color/text_title_color"
+            android:textSize="@dimen/font_14" />
+
+        <ImageView
+            android:id="@+id/img_write_print"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:background="@drawable/bg_material"
+            android:contentDescription="@string/write_print"
+            android:src="@mipmap/ic_write_print" />
+    </LinearLayout>
+
+    <View style="@style/h_line" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/refreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srlEnableFooterFollowWhenLoadFinished="true"
+            app:srlEnableLoadMoreWhenContentNotFull="false"
+            app:srlEnableNestedScrolling="true"
+            app:srlEnableScrollContentWhenLoaded="true"
+            app:srlFooterTriggerRate="0"
+            app:srlHeaderMaxDragRate="2.0">
+
+            <com.scwang.smartrefresh.layout.header.ClassicsHeader
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                app:srlTextSizeTime="@dimen/font_8"
+                app:srlTextSizeTitle="@dimen/font_10" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#F5F5F5"
+                android:overScrollMode="never" />
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+        <top.limuyang2.shadowlayoutlib.ShadowLinearLayout
+            android:id="@+id/shadow_notice"
+            android:layout_width="@dimen/size_28"
+            android:layout_height="@dimen/size_28"
+            android:layout_gravity="bottom|right"
+            android:layout_marginRight="39dp"
+            android:layout_marginBottom="87dp"
+            android:background="#fff"
+            app:l_radius="@dimen/space_14"
+            app:l_shadowAlpha="0.91"
+            app:l_shadowElevation="@dimen/space_16">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/img_count"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/ic_notice_count" />
+
+                <TextView
+                    android:id="@+id/tv_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="@color/day_colorPrimary"
+                    android:textSize="@dimen/font_10"
+                    android:visibility="gone"
+                    tools:text="1" />
+            </FrameLayout>
+        </top.limuyang2.shadowlayoutlib.ShadowLinearLayout>
+    </FrameLayout>
+</LinearLayout>

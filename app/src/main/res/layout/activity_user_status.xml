@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/App.Widget.Light.Toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_49"
+        android:layout_marginBottom="0dp"
+        android:background="@color/white"
+        android:titleTextColor="@color/black"
+        app:layout_collapseMode="pin"
+        app:navigationIcon="@mipmap/btn_back_dark_pressed"
+        app:popupTheme="@style/ToolbarPopupBlackTheme"
+        tools:ignore="UnusedAttribute" />
+
+    <View style="@style/h_line" />
+
+    <TextView
+        android:id="@+id/tv_my_setting_friend_single"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_material"
+        android:drawableRight="@mipmap/selected_ico"
+        android:lineSpacingExtra="5dp"
+        android:paddingLeft="15dp"
+        android:paddingTop="15dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="15dp"
+        android:text="@string/setting_friend_single"
+        android:textColor="@color/day_colorPrimary"
+        android:textSize="13dp" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1.2px"
+        android:layout_marginLeft="15dp"
+        android:src="#D5D5D5" />
+
+    <TextView
+        android:id="@+id/tv_my_setting_friend_disable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_material"
+        android:lineSpacingExtra="5dp"
+        android:paddingLeft="15dp"
+        android:paddingTop="15dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="15dp"
+        android:text="@string/setting_friend_disable"
+        android:textColor="@color/day_colorPrimary"
+        android:textSize="13dp" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="15dp"
+        android:src="#D5D5D5" />
+
+    <TextView
+        android:id="@+id/tv_my_setting_friend_close"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_material"
+        android:lineSpacingExtra="5dp"
+        android:paddingLeft="15dp"
+        android:paddingTop="15dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="15dp"
+        android:text="@string/setting_friend_close"
+        android:textColor="@color/day_colorPrimary"
+        android:textSize="13dp" />
+</LinearLayout>

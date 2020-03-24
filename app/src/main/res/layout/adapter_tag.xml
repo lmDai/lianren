@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingLeft="@dimen/space_16"
+    android:paddingTop="@dimen/space_4"
+    android:paddingRight="@dimen/space_16"
+    android:paddingBottom="@dimen/space_4">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/space_5"
+        android:text="#"
+        android:textColor="@color/imprint_content_color"
+        android:textSize="@dimen/font_14" />
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textColor="@color/imprint_content_color"
+        android:textSize="@dimen/font_14"
+        tools:text="你分手需要多久" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FF595959"
+        android:textSize="@dimen/font_14"
+        tools:text="6条" />
+</LinearLayout>

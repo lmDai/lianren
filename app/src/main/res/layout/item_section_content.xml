@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/space_16"
+        android:lineSpacingExtra="@dimen/lay_2"
+        android:textColor="@color/text_user_name_color"
+        android:textSize="@dimen/font_14"
+        tools:text="重庆大学" />
+
+    <View style="@style/h_line" />
+</LinearLayout>

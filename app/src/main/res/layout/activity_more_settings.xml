@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/App.Widget.Light.Toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_49"
+        android:layout_marginBottom="0dp"
+        android:background="@color/white"
+        android:titleTextColor="@color/black"
+        app:layout_collapseMode="pin"
+        app:navigationIcon="@mipmap/btn_back_dark_pressed"
+        app:popupTheme="@style/ToolbarPopupBlackTheme"
+        tools:ignore="UnusedAttribute" />
+
+    <View style="@style/h_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F5F5F5"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_infomation"
+            style="@style/option_item_rl">
+
+            <TextView
+                style="@style/option_item_text"
+                android:text="消息提醒" />
+
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="10dp"
+                android:layout_weight="1" />
+
+            <Switch
+                android:id="@+id/switch_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <View
+            style="@style/h_line"
+            android:layout_height="1px"
+            android:background="@color/list_divider_color" />
+
+        <LinearLayout
+            android:id="@+id/ll_register_info"
+            style="@style/option_item_rl">
+
+            <TextView
+                style="@style/option_item_text"
+                android:text="注册信息" />
+
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="10dp"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:contentDescription="@null"
+                android:src="@mipmap/ic_arrow_right" />
+        </LinearLayout>
+
+        <View
+            style="@style/h_line"
+            android:layout_height="1px"
+            android:background="@color/list_divider_color" />
+
+
+        <LinearLayout
+            android:id="@+id/ll_version"
+            style="@style/option_item_rl">
+
+            <TextView
+                style="@style/option_item_text"
+                android:text="当前版本" />
+
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="10dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/tv_version_name"
+                style="@style/option_item_text"
+                tools:text="v16.7" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:contentDescription="@null"
+                android:src="@mipmap/ic_arrow_right" />
+        </LinearLayout>
+
+        <View
+            style="@style/h_line"
+            android:layout_height="1px"
+            android:background="@color/list_divider_color" />
+
+        <LinearLayout
+            android:id="@+id/ll_clear_cache"
+            style="@style/option_item_rl">
+
+            <TextView
+                style="@style/option_item_text"
+                android:text="清除缓存" />
+
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="10dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/tv_cache"
+                style="@style/option_item_text"
+                tools:text="v16.7" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:contentDescription="@null"
+                android:src="@mipmap/ic_arrow_right" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_logout"
+            style="@style/option_item_rl"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/space_16"
+            android:gravity="center">
+
+            <TextView
+                style="@style/option_item_text"
+                android:text="退出" />
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <android.support.design.card.MaterialCardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:cardCornerRadius="@dimen/space_4"
+        app:cardElevation="@dimen/space_2"
+        app:cardMaxElevation="@dimen/space_2"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="335dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_vip_item_normal"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingBottom="23dp">
+
+            <LinearLayout
+                android:id="@+id/ll_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right">
+
+                <ImageView
+                    android:layout_width="@dimen/space_15"
+                    android:layout_height="@dimen/space_15"
+
+                    android:layout_margin="@dimen/space_10"
+                    android:src="@mipmap/ic_clear"
+                    android:tint="@color/imprint_content_color" />
+            </LinearLayout>
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/vip_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:layoutManager="android.support.v7.widget.GridLayoutManager"
+                app:spanCount="4"
+                tools:listitem="@layout/item_enable_member" />
+
+            <Button
+                android:id="@+id/btn_vip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="56dp"
+                android:background="@drawable/bg_vip_submit"
+                android:gravity="center"
+                android:minWidth="@dimen/size_76"
+                android:minHeight="@dimen/size_32"
+                android:text="升级VIP"
+                android:textSize="@dimen/font_14" />
+        </LinearLayout>
+    </android.support.design.card.MaterialCardView>
+</LinearLayout>

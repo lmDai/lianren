@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/space_14"
+    android:layout_marginRight="@dimen/space_14"
+    android:orientation="vertical">
+
+    <android.support.design.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/space_4"
+        app:cardElevation="@dimen/space_2"
+        app:cardMaxElevation="@dimen/space_2"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/ll_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_item_goods_normal"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/space_5"
+                android:paddingTop="@dimen/space_16"
+                android:paddingRight="@dimen/space_5"
+                android:paddingBottom="@dimen/space_16">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:scaleType="centerInside"
+                    android:src="@mipmap/ticket_ico" />
+
+                <TextView
+                    android:id="@+id/tv_ticket_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/space_3"
+                    android:textColor="@color/tab_selected_color"
+                    android:textSize="@dimen/font_16"
+                    tools:text="男生票" />
+
+                <TextView
+                    android:id="@+id/txt_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/space_5"
+                    android:text="￥50"
+                    android:textColor="#FF575656"
+                    android:textSize="@dimen/font_16" />
+
+                <TextView
+                    android:id="@+id/tv_discount1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/space_5"
+                    android:background="@drawable/bg_discount_info_normal"
+                    android:gravity="center"
+                    android:minWidth="@dimen/space_35"
+                    android:minHeight="@dimen/space_15"
+                    android:paddingLeft="@dimen/space_5"
+                    android:paddingRight="@dimen/space_5"
+                    android:textColor="#AEAEAE"
+                    android:textSize="@dimen/font_8"
+                    tools:text="女生5折" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_content1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_item_goods_checked"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/space_5"
+                android:paddingTop="@dimen/space_6"
+                android:paddingRight="@dimen/space_5"
+                android:paddingBottom="@dimen/space_10">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/txt_goods_name1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_16"
+                        tools:text="喝茶弹琴" />
+
+                    <TextView
+                        android:id="@+id/txt_price1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/space_5"
+                        android:text="￥50"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_16" />
+
+                    <TextView
+                        android:id="@+id/tv_discount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/space_5"
+                        android:background="@drawable/bg_discount_info"
+                        android:gravity="center"
+                        android:minWidth="@dimen/space_35"
+                        android:minHeight="@dimen/space_15"
+                        android:paddingLeft="@dimen/space_5"
+                        android:paddingRight="@dimen/space_5"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_8"
+                        tools:text="女生5折" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txt_goods_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_14"
+                        android:gravity="left"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_10"
+                        tools:text="有效时间：2019.06/01 19:00 - 2019.06/21 19:00" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:gravity="left"
+                        android:text="备注说明："
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_10" />
+
+                    <TextView
+                        android:id="@+id/txt_describe1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:gravity="left"
+                        android:text="请在换取纸质票时,出示信息证明"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_10" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+    </android.support.design.card.MaterialCardView>
+</RelativeLayout>

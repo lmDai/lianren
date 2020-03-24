@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" >
+    <!-- 按压时的图片资源 -->
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <!-- 填充 -->
+            <solid
+                android:color="@color/permission_dialog_btn_bg_color"/>
+            <corners
+                android:radius="30dp"/>
+        </shape>
+    </item>
+
+    <!-- 正常时的图片资源 -->
+    <item >
+        <shape android:shape="rectangle">
+            <solid
+                android:color="@color/permission_dialog_btn_bg_color"/>
+            <corners
+                android:radius="30dp"/>
+        </shape>
+    </item>
+
+</selector>

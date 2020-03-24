@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:background="@color/white"
+    android:minHeight="56dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_item"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center|start"
+        android:paddingLeft="@dimen/space_16"
+        android:paddingRight="@dimen/space_16">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_avater"
+            android:layout_width="@dimen/size_32"
+            android:layout_height="@dimen/size_32"
+            android:src="@mipmap/ic_default_image" />
+
+
+        <TextView
+            android:id="@+id/tv_nickname"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/space_6"
+            android:gravity="center_vertical"
+            android:textColor="@color/tab_selected_color"
+            android:textSize="@dimen/font_12"
+            tools:text="倪妮" />
+        <TextView
+            android:id="@+id/tv_create"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/space_6"
+            android:gravity="center_vertical"
+            android:textColor="#FFB9B9B9"
+            android:textSize="@dimen/font_10"
+            tools:text="倪妮" />
+    </LinearLayout>
+
+</LinearLayout>

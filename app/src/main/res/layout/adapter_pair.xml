@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mcxtzhang.swipemenulib.SwipeMenuLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="61dp"
+    android:background="@color/white"
+    android:minHeight="61dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_item"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:paddingLeft="@dimen/space_16"
+        android:paddingRight="@dimen/space_16">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_avater"
+            android:layout_width="@dimen/size_32"
+            android:layout_height="@dimen/size_32"
+            android:src="@mipmap/ic_squre_placeholder" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/space_12"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_nickname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/tab_selected_color"
+                    android:textSize="@dimen/font_12"
+                    tools:text="倪妮" />
+
+                <TextView
+                    android:id="@+id/tv_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/space_10"
+                    android:textColor="#FFAAAAAA"
+                    android:textSize="@dimen/font_10"
+                    tools:text="昨天" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_about"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_5"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textColor="#FFAAAAAA"
+                android:textSize="@dimen/font_12"
+                tools:text="我是一个无人知道的小草,从不怕风吹雨打..." />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_accept"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_pair_accept"
+            android:gravity="center"
+            android:minWidth="65dp"
+            android:layout_marginLeft="5dp"
+            android:minHeight="@dimen/space_35"
+            android:textColor="@color/day_colorPrimary"
+            android:textSize="@dimen/font_12"
+            android:text="接受" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@color/day_colorPrimary"
+        android:gravity="center"
+        android:paddingLeft="22dp"
+        android:paddingRight="22dp"
+        android:text="@string/delete"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_12" />
+</com.mcxtzhang.swipemenulib.SwipeMenuLayout>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:cardCornerRadius="@dimen/space_4"
+    app:cardElevation="@dimen/space_2"
+    app:cardMaxElevation="@dimen/space_2"
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="true">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rv_topbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/pickerview_topbar_height">
+
+            <TextView
+                android:id="@+id/txt_time"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="@dimen/pickerview_topbar_padding"
+                android:textAllCaps="false"
+                android:textColor="@color/tab_selected_color"
+                android:textSize="@dimen/font_14"
+                tools:text="8月15 12:30" />
+
+            <Button
+                android:id="@+id/btnSubmit"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="@android:color/transparent"
+                android:gravity="right|center_vertical"
+                android:paddingRight="@dimen/pickerview_topbar_padding"
+                android:text="@string/pickerview_submit"
+                android:textAllCaps="false"
+                android:textColor="@color/day_colorPrimary"
+                android:textSize="@dimen/font_14" />
+        </RelativeLayout>
+
+        <View style="@style/h_line" />
+
+        <LinearLayout
+            android:id="@+id/optionspicker"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.lianren.android.widget.invitetime.CalendarView
+                android:id="@+id/calendar_day"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <com.contrarywind.view.WheelView
+                android:id="@+id/wheel_view"
+                android:layout_width="@dimen/size_128"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</android.support.design.card.MaterialCardView>

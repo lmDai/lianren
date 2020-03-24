@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 权限图标【可根据实际情况修改】 -->
+    <integer-array name="permission_icon">
+        <item>@drawable/permission_ic_storage</item>
+        <item>@drawable/permission_ic_phone</item>
+    </integer-array>
+    <!-- 权限标题【可根据实际情况修改】 -->
+    <string-array name="permission_title">
+        <item>文件存储</item>
+        <item>电话状态</item>
+    </string-array>
+    <!-- 权限说明（这里应该是根据项目的实际情况，简要说明下该权限主要用于什么场景或者功能）【可根据实际情况修改】 -->
+    <string-array name="permission_info">
+        <item>允许应用读取、写入外部存储</item>
+        <item>允许应用访问电话状态</item>
+    </string-array>
+</resources>

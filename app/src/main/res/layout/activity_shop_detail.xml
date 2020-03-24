@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/App.Widget.Light.Toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_49"
+        android:layout_marginBottom="0dp"
+        android:background="@android:color/transparent"
+        android:titleTextColor="@color/black"
+        app:layout_collapseMode="pin"
+        app:navigationIcon="@mipmap/btn_back_dark_pressed"
+        app:popupTheme="@style/ToolbarPopupBlackTheme"
+        tools:ignore="UnusedAttribute" />
+
+    <View style="@style/h_line" />
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:srlEnableFooterFollowWhenLoadFinished="true"
+        app:srlEnableLoadMore="false"
+        app:srlEnableLoadMoreWhenContentNotFull="false"
+        app:srlEnableNestedScrolling="true"
+        app:srlEnableScrollContentWhenLoaded="true"
+        app:srlFooterTriggerRate="0"
+        app:srlHeaderMaxDragRate="2.0">
+
+        <com.scwang.smartrefresh.layout.header.ClassicsHeader
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            app:srlTextSizeTime="@dimen/font_8"
+            app:srlTextSizeTitle="@dimen/font_10" />
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#F5F5F5">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:paddingLeft="@dimen/space_16"
+                    android:paddingRight="@dimen/space_16"
+                    android:orientation="vertical">
+
+                    <com.lianren.android.widget.RoundImageView
+                        android:id="@+id/image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="230dp"
+                        android:layout_marginTop="@dimen/space_8"
+                        android:adjustViewBounds="true"
+                        android:src="@mipmap/ic_squre_placeholder"
+                        app:borderRadius="@dimen/space_4"
+                        app:bottom_left="true"
+                        app:bottom_right="true"
+                        app:top_left="true"
+                        app:top_right="true"
+                        app:type="round" />
+
+                    <TextView
+                        android:id="@+id/tv_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_16"
+                        android:gravity="center_vertical"
+                        android:minHeight="30dp"
+                        android:textColor="#373737"
+                        android:textSize="@dimen/font_14"
+                        tools:text="叹庐云道茶社" />
+
+                    <TextView
+                        android:id="@+id/tv_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:minHeight="30dp"
+                        android:textColor="#373737"
+                        android:textSize="@dimen/font_12"
+                        tools:text="重庆市渝北区红警大道57号A栋23楼微锐空间" />
+
+                    <TextView
+                        android:id="@+id/tv_total_cost"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:minHeight="30dp"
+                        android:textColor="#373737"
+                        android:textSize="@dimen/font_12"
+                        tools:text="￥ 50 ～ 95" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_12"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/space_16">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/space_16"
+                        android:text="活动摘要"
+                        android:textColor="@color/day_colorPrimary"
+                        android:textSize="@dimen/font_10" />
+
+                    <TextView
+                        android:id="@+id/intro"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/space_16"
+                        android:layout_marginTop="@dimen/space_5"
+                        android:layout_marginRight="@dimen/space_16"
+                        android:lineSpacingExtra="@dimen/space_3"
+                        android:textColor="#373737"
+                        android:textSize="@dimen/font_12"
+                        tools:text="每周六下午为大家提供一个练吉他与相互交流的机会 老板因为懒练不好吉他 所以想创造一个小型音乐聚会的氛围：有音响话筒 可弹唱 可围观 由高手的切磋 带动新手 共同进步
+通过此活动认识的朋友们甚至都没有固定在周六见面了，大多在小橘屋的周五聚会上凑一起搞弹唱、别的时间有在橘子屋相约或偶遇过， 一偶遇就又是一场弹唱会。甚至有一次20几号人还集体去街头弹唱过，有视频存档，可加橘子屋微信索要。
+欢迎各位吉他（或尤克里里）爱好者携带上吉他来小店练吉他，会非洲鼓的朋友也可以加入一起玩哦，★特别邀请吉他弹唱拿手的朋友来周五聚会趴做弹唱嘉宾，可免费入场。
+“小橘屋周五聚会趴、弹唱活动为同城最早期、最原始主办方，一直被模仿，从不可能被超越” ......
+" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_scan_detail"
+                        style="@style/option_item_rl">
+
+                        <TextView
+                            android:id="@+id/tv_time"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColor="#373737"
+                            android:textSize="@dimen/font_12"
+                            tools:text="营业时间：09:00 ～ 22:00" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="查看详细介绍 &gt;"
+                            android:textColor="#373737"
+                            android:textSize="@dimen/font_12" />
+                    </LinearLayout>
+
+                    <View style="@style/h_line" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <LinearLayout
+            android:id="@+id/ll_call"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableTop="@mipmap/ic_constraint"
+                android:text="咨询"
+                android:textColor="@color/event_status_disable"
+                android:textSize="@dimen/font_12" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_status"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_event_status"
+            android:minWidth="126dp"
+            android:text="购票"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_14" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_like"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:minHeight="@dimen/size_52"
+        android:background="@drawable/ic_material"
+        android:gravity="center"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/tv_like_opt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="喜欢"
+            android:textColor="@color/day_colorPrimary"
+            android:textSize="@dimen/font_14"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="7天只能使用1次"
+            android:textColor="#FFD2D2D2"
+            android:textSize="@dimen/font_12" />
+    </LinearLayout>
+
+
+    <View
+        android:id="@+id/view_line_1"
+        style="@style/h_line" />
+
+    <TextView
+        android:id="@+id/tv_shiled_opt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_material"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="屏蔽"
+        android:textColor="@color/day_colorPrimary"
+        android:textSize="@dimen/font_14"
+        tools:ignore="HardcodedText" />
+
+    <View
+        android:id="@+id/view_line"
+        style="@style/h_line" />
+
+    <TextView
+        android:id="@+id/tv_collection_opt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_material"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="收藏"
+        android:textColor="@color/day_colorPrimary"
+        android:textSize="@dimen/font_14"
+        android:visibility="gone"
+        tools:ignore="HardcodedText" />
+
+    <View
+        style="@style/h_line"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_feed_back_opt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_material"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="反馈 &amp; 投诉"
+        android:textColor="@color/day_colorPrimary"
+        android:textSize="@dimen/font_14"
+        tools:ignore="HardcodedText" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="12dp" />
+
+    <TextView
+        android:id="@+id/tv_cancel_opt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_material"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="取消"
+        android:textColor="@color/day_colorPrimary"
+        android:textSize="@dimen/font_14"
+        tools:ignore="HardcodedText" />
+
+</LinearLayout>

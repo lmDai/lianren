@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_hide_opt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_material"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="隐藏"
+        android:textColor="@color/day_colorPrimary"
+        android:textSize="@dimen/font_14"
+        tools:ignore="HardcodedText" />
+
+    <View style="@style/h_line" />
+
+    <TextView
+        android:id="@+id/tv_edit_opt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_material"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="编辑"
+        android:textColor="@color/day_colorPrimary"
+        android:textSize="@dimen/font_14"
+        tools:ignore="HardcodedText" />
+    <View style="@style/h_line" />
+
+    <TextView
+        android:id="@+id/tv_delete_opt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_material"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="删除"
+        android:textColor="@color/day_colorPrimary"
+        android:textSize="@dimen/font_14"
+        tools:ignore="HardcodedText" />
+    <View style="@style/h_line" />
+    <TextView
+        android:id="@+id/tv_tag_set"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_material"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="置顶到个人主页"
+        android:textColor="@color/day_colorPrimary"
+        android:textSize="@dimen/font_14"
+        tools:ignore="HardcodedText" />
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="12dp" />
+
+    <TextView
+        android:id="@+id/tv_cancel_opt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_material"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="取消"
+        android:textColor="@color/day_colorPrimary"
+        android:textSize="@dimen/font_14"
+        tools:ignore="HardcodedText" />
+
+</LinearLayout>

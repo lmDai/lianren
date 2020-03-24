@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_order_list"
+        style="@style/option_item"
+        android:minHeight="54dp"
+        android:visibility="gone"
+        android:orientation="vertical"
+      >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/space_16"
+            android:paddingTop="@dimen/space_12"
+            android:paddingRight="@dimen/space_16"
+            android:paddingBottom="@dimen/space_12">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="@dimen/size_32"
+                    android:layout_height="@dimen/size_32"
+                    android:background="@drawable/bg_ticket"
+                    android:padding="@dimen/space_2"
+                    android:src="@mipmap/ic_ticket_white" />
+
+                <TextView
+                    android:id="@+id/nav_tv_dot"
+                    android:layout_width="6dp"
+                    android:layout_height="6dp"
+                    android:layout_gravity="top|right"
+                    android:background="@drawable/ic_red_dot"
+                    android:ellipsize="none"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    tools:visibility="visible" />
+            </FrameLayout>
+
+
+            <TextView
+                style="@style/option_item_text"
+                android:layout_marginLeft="@dimen/space_10"
+                android:text="票单" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="10dp"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <View style="@style/h_line" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_invite"
+        style="@style/option_item"
+        android:minHeight="54dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/space_16"
+            android:paddingTop="@dimen/space_12"
+            android:paddingRight="@dimen/space_16"
+            android:paddingBottom="@dimen/space_12">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+                <ImageView
+                    android:layout_width="@dimen/size_32"
+                    android:layout_height="@dimen/size_32"
+                    android:background="@drawable/bg_invite"
+                    android:src="@mipmap/ic_invite_white" />
+
+                <TextView
+                    android:id="@+id/tv_unread_invite"
+                    android:layout_width="6dp"
+                    android:layout_height="6dp"
+                    android:layout_gravity="top|right"
+                    android:background="@drawable/ic_red_dot"
+                    android:ellipsize="none"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    tools:visibility="visible" />
+            </FrameLayout>
+
+            <TextView
+                style="@style/option_item_text"
+                android:layout_marginLeft="@dimen/space_10"
+                android:text="邀约" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="10dp"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <View style="@style/h_line" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_pair"
+        style="@style/option_item"
+        android:minHeight="54dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/space_16"
+            android:paddingTop="@dimen/space_12"
+            android:paddingRight="@dimen/space_16"
+            android:paddingBottom="@dimen/space_12">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+                <ImageView
+                    android:layout_width="@dimen/size_32"
+                    android:layout_height="@dimen/size_32"
+                    android:background="@drawable/bg_join"
+                    android:padding="@dimen/space_6"
+                    android:src="@mipmap/ic_join_white" />
+
+                <TextView
+                    android:id="@+id/tv_pair_count"
+                    android:layout_width="6dp"
+                    android:layout_height="6dp"
+                    android:layout_gravity="top|right"
+                    android:background="@drawable/ic_red_dot"
+                    android:ellipsize="none"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    tools:visibility="visible" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/space_10"
+                android:gravity="center|start"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/option_item_text"
+                    android:text="申请匹配" />
+
+                <TextView
+                    android:id="@+id/tv_pair_msg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/tab_selected_color"
+                    android:textSize="@dimen/space_12"
+                    tools:text="5位用户申请匹配" />
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="10dp"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <View style="@style/h_line" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_system_message"
+        style="@style/option_item"
+        android:minHeight="54dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/space_16"
+            android:paddingTop="@dimen/space_12"
+            android:paddingRight="@dimen/space_16"
+            android:paddingBottom="@dimen/space_12">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+                <ImageView
+                    android:layout_width="@dimen/size_32"
+                    android:layout_height="@dimen/size_32"
+                    android:background="@drawable/bg_system"
+                    android:padding="@dimen/space_6"
+                    android:src="@mipmap/ic_system_white" />
+
+                <TextView
+                    android:id="@+id/tv_system_count"
+                    android:layout_width="6dp"
+                    android:layout_height="6dp"
+                    android:layout_gravity="top|right"
+                    android:background="@drawable/ic_notice_dot"
+                    android:ellipsize="none"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    tools:visibility="visible" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/space_10"
+                android:gravity="center|start"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/option_item_text"
+                    android:text="系统消息" />
+
+                <TextView
+                    android:id="@+id/tv_system_msg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/tab_selected_color"
+                    android:textSize="@dimen/space_12"
+                    tools:text="妮妮想你表白了，快去看看吧" />
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="10dp"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <View style="@style/h_line" />
+    </LinearLayout>
+
+
+</LinearLayout>

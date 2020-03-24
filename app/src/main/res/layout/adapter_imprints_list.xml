@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="450dp"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/size_24">
+
+    <LinearLayout
+        android:id="@+id/ll_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingLeft="@dimen/space_16"
+        android:paddingRight="@dimen/space_16">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_avater"
+            android:layout_width="@dimen/size_20"
+            android:layout_height="@dimen/size_20"
+            android:src="@mipmap/ic_default_user"
+            app:civ_border_overlay="true" />
+
+        <TextView
+            android:id="@+id/tv_nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/space_4"
+            android:gravity="left"
+            android:text="蛮儿 "
+            android:textColor="@color/imprint_main_color"
+            android:textSize="@dimen/font_12" />
+
+        <TextView
+            android:id="@+id/tv_hide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/space_6"
+            android:paddingRight="@dimen/space_6"
+            android:text="隐藏"
+            android:textColor="#FFC3C3C3"
+            android:textSize="@dimen/font_12" />
+    </LinearLayout>
+
+    <android.support.design.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="@dimen/space_16"
+        android:layout_marginTop="7dp"
+        android:layout_marginRight="@dimen/space_16"
+        android:layout_weight="1"
+        app:cardCornerRadius="@dimen/space_4"
+        app:cardElevation="@dimen/space_2"
+        app:cardMaxElevation="@dimen/space_2"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.lianren.android.widget.circle.ExpandView
+                android:id="@+id/tv_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_16"
+                android:layout_marginTop="@dimen/space_16"
+                android:layout_marginEnd="@dimen/space_16"
+                android:lineSpacingMultiplier="1.4"
+                android:textColor="#FF605E5E"
+                android:textSize="@dimen/font_14"
+                tools:text="这个价钱不一定啊。那就买个油耗低那就买个油耗低的车那就买个油耗低的车那就买个油耗低的车那就买个油耗低的车那就买个油耗低的车那就买个油耗低的车那就买个油耗低的车那就买个油耗低的车那就买个油耗低的车那就买个油耗低的车那就买个油耗低的车的车，这样就 便宜很多了哈哈！这个价钱不一定啊。那就买个油耗低的车，这样就便宜很多了哈哈！" />
+
+
+            <com.lianren.android.widget.PageNumberListPoint
+                android:id="@+id/page_number_point"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="@dimen/space_10"
+                android:layout_marginBottom="@dimen/space_10"
+                android:paddingLeft="@dimen/space_16"
+                android:paddingRight="@dimen/space_16" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <com.zhy.view.flowlayout.TagFlowLayout
+                android:id="@+id/tag_flow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:paddingLeft="@dimen/space_16"
+                android:paddingTop="8dp"
+                android:paddingRight="@dimen/space_16"
+                android:paddingBottom="8dp"
+                android:textColor="@color/colorPrimary" />
+
+            <LinearLayout
+                android:id="@+id/ll_imprint_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|right"
+                android:minHeight="50dp"
+                android:paddingLeft="@dimen/space_16"
+                android:paddingRight="@dimen/space_16">
+
+                <LinearLayout
+                    android:id="@+id/ll_pick"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/space_5"
+                    android:layout_marginRight="@dimen/space_5"
+                    android:background="@drawable/ic_material"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="17dp"
+                        android:layout_height="17dp"
+                        android:layout_marginLeft="@dimen/size_20"
+                        android:layout_marginTop="@dimen/space_10"
+                        android:layout_marginBottom="@dimen/space_10"
+                        android:src="@mipmap/icon_praise_normal"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_picks"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_10"
+                        android:layout_marginBottom="@dimen/space_10"
+                        android:minWidth="@dimen/size_20"
+                        android:text="1"
+                        android:textColor="@color/imprint_main_color"
+                        android:textSize="@dimen/font_10" />
+                </LinearLayout>
+                <!--<com.lianren.android.widget.circle.ScrollTextView-->
+                <!--android:id="@+id/tv_picks"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="@dimen/space_5"-->
+                <!--android:layout_marginRight="@dimen/space_5"-->
+                <!--android:minWidth="@dimen/size_20" />-->
+
+
+                <LinearLayout
+                    android:id="@+id/ll_comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/ic_material"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="17dp"
+                        android:layout_height="17dp"
+                        android:layout_marginLeft="@dimen/space_10"
+                        android:layout_marginTop="@dimen/space_10"
+                        android:layout_marginRight="@dimen/space_10"
+                        android:layout_marginBottom="@dimen/space_10"
+                        android:src="@mipmap/icon_leave_message"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_replys"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_10"
+                        android:layout_marginBottom="@dimen/space_10"
+                        android:minWidth="@dimen/size_20"
+                        android:text="1"
+                        android:textColor="@color/imprint_main_color"
+                        android:textSize="@dimen/font_10"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.design.card.MaterialCardView>
+
+
+</LinearLayout>

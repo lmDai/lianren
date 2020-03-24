@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_contact"
+            style="@style/option_item_rl">
+
+            <TextView
+                style="@style/option_item_text"
+                android:text="联系人" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="10dp"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:contentDescription="@null"
+                android:src="@mipmap/ic_arrow_right" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_collect"
+            style="@style/option_item_rl"
+            android:layout_marginTop="1dp">
+
+            <TextView
+                style="@style/option_item_text"
+                android:text="收藏" />
+
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="10dp"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:contentDescription="@null"
+                android:src="@mipmap/ic_arrow_right" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_user_info"
+            style="@style/option_item_rl"
+            android:layout_marginTop="1dp">
+
+            <TextView
+                style="@style/option_item_text"
+                android:text="主页" />
+
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="10dp"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:contentDescription="@null"
+                android:src="@mipmap/ic_arrow_right" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_vip"
+            style="@style/option_item_rl"
+            android:layout_marginTop="1dp">
+
+            <TextView
+                style="@style/option_item_text"
+                android:text="VIP" />
+
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="10dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/tv_vip"
+                style="@style/option_item_text"
+                android:text="已开通"
+                android:textColor="#CCCCCC" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:contentDescription="@null"
+                android:src="@mipmap/ic_arrow_right" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_ora"
+            style="@style/option_item_rl"
+            android:layout_marginTop="1dp">
+
+            <TextView
+                style="@style/option_item_text"
+                android:layout_height="wrap_content"
+                android:text="身份认证" />
+
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="10dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/tv_ora"
+                style="@style/option_item_text"
+                android:text="已开通"
+                android:textColor="#CCCCCC" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:contentDescription="@null"
+                android:src="@mipmap/ic_arrow_right" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_status"
+            style="@style/option_item_rl"
+            android:layout_marginTop="1dp">
+
+            <TextView
+                style="@style/option_item_text"
+                android:text="感情状态" />
+
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="10dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/tv_status"
+                style="@style/option_item_text"
+                android:text="已开通"
+                android:textColor="#CCCCCC" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:contentDescription="@null"
+                android:src="@mipmap/ic_arrow_right" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_help"
+            style="@style/option_item_rl"
+            android:layout_marginTop="1dp">
+
+            <TextView
+                style="@style/option_item_text"
+                android:text="帮助与反馈" />
+
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="10dp"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:contentDescription="@null"
+                android:src="@mipmap/ic_arrow_right" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="@dimen/size_40"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_more"
+                style="@style/option_item_rl">
+
+                <TextView
+                    style="@style/option_item_text"
+                    android:text="更多" />
+
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:contentDescription="@null"
+                    android:src="@mipmap/ic_arrow_right" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

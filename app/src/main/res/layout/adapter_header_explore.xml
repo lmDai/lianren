@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/window_background"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+
+        <LinearLayout
+            android:id="@+id/ll_event"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center|top">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_16"
+                android:layout_marginRight="3dp"
+                android:background="@drawable/bg_vertical"
+                android:ems="1"
+                android:gravity="center"
+                android:letterSpacing="3"
+                android:lineSpacingExtra="@dimen/space_3"
+                android:paddingTop="@dimen/space_8"
+                android:paddingBottom="@dimen/space_8"
+                android:text="热点活动"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_10" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_event"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+                tools:listitem="@layout/adapter_home_event" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="right|center"
+            android:layout_marginRight="@dimen/space_10"
+            android:src="@mipmap/ic_next_event" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_all_event"
+        style="@style/option_item_rl"
+        android:background="@color/window_background"
+        android:visibility="gone">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="10dp"
+            android:layout_weight="1" />
+
+        <TextView
+            style="@style/option_item_text"
+            android:text="全部活动"
+            android:textSize="@dimen/font_12" />
+    </LinearLayout>
+
+    <android.support.design.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/space_16"
+        android:layout_marginRight="@dimen/space_16"
+        app:cardCornerRadius="@dimen/space_4"
+        app:cardElevation="@dimen/space_2"
+        app:cardMaxElevation="@dimen/space_2"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/ll_pub"
+                style="@style/option_item_rl">
+
+                <TextView
+                    style="@style/option_item_text"
+                    android:text="印记" />
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_tags"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/space_4"
+                android:paddingBottom="@dimen/space_12"
+                app:layoutManager="android.support.v7.widget.LinearLayoutManager" />
+        </LinearLayout>
+    </android.support.design.card.MaterialCardView>
+</LinearLayout>

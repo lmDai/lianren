@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/space_16"
+    android:layout_marginTop="@dimen/space_16"
+    android:layout_marginRight="@dimen/space_16"
+    android:orientation="vertical">
+
+
+    <net.oschina.common.widget.SquareLayout
+        android:id="@+id/squre_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_adapter_stroke_matchings">
+
+        <com.lianren.android.widget.RoundImageView
+            android:id="@+id/img_avater"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="1dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginRight="1dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_squre_placeholder"
+            app:borderRadius="@dimen/space_4"
+            app:bottom_left="false"
+            app:bottom_right="false"
+            app:top_left="true"
+            app:top_right="true"
+            app:type="round" />
+    </net.oschina.common.widget.SquareLayout>
+
+    <TextView
+        android:id="@+id/tv_about"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/squre_layout"
+        android:background="@drawable/bg_bottom_corner"
+        android:ellipsize="end"
+        android:lineSpacingExtra="@dimen/lay_2"
+        android:maxLines="2"
+        android:minLines="2"
+        android:paddingLeft="@dimen/space_6"
+        android:paddingTop="@dimen/space_8"
+        android:paddingRight="@dimen/space_6"
+        android:paddingBottom="@dimen/space_8"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_14"
+        tools:text="喜欢落魄风，吃货，爱旅游喜欢落魄风，吃货，爱旅游喜欢落魄风，
+        吃货，爱旅游喜欢落魄风，吃货，爱旅游喜欢落魄风，吃货，爱旅游" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/space_4"
+        android:layout_marginRight="@dimen/space_10"
+        android:text="恋人指数"
+        android:textColor="@color/tab_selected_color"
+        android:textSize="@dimen/font_12"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_title"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/space_2"
+        android:layout_marginRight="@dimen/space_10"
+        android:text="40%"
+        android:textColor="@color/tab_selected_color"
+        android:textSize="@dimen/font_18"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_close"
+        android:layout_width="129dp"
+        android:layout_height="48dp"
+        android:layout_above="@+id/tv_about"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="37dp"
+        android:background="@drawable/bg_close_button"
+        android:gravity="center"
+        android:text="关闭显示 "
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_14"
+        android:top="746dp"
+        android:visibility="gone" />
+</RelativeLayout>

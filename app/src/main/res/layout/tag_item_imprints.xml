@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tv_ques_detail_tag"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="@dimen/space_4"
+    android:maxLines="1"
+    android:minLines="1"
+    android:paddingTop="2dp"
+    android:paddingRight="8dp"
+    android:paddingBottom="2dp"
+    android:textColor="@color/imprint_main_color"
+    android:textSize="@dimen/font_12"
+    tools:text="New Text" />
+
+

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        android:titleTextColor="@color/black"
+        app:navigationIcon="@mipmap/btn_back_dark_pressed"
+        app:popupTheme="@style/ToolbarPopupBlackTheme"
+        tools:ignore="UnusedAttribute" />
+
+    <View style="@style/h_line" />
+<TextView
+    android:id="@+id/tv_type"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/space_16"
+    android:textColor="#FFB3B3B3"
+    android:textSize="@dimen/font_14"
+   tools:text="反馈类型：会员-色情暴力" />
+    <View style="@style/h_line" />
+    <EditText
+        android:id="@+id/edit_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:padding="@dimen/space_16"
+        android:gravity="start|left|top"
+        android:hint="请输入反馈内容"
+        android:minLines="4"
+        android:textColor="#111111"
+        android:textSize="@dimen/font_12" />
+    <com.lianren.android.widget.TweetPicturesPreviewer
+        android:id="@+id/recycler_images"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

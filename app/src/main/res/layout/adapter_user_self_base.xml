@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="@dimen/space_16"
+    android:background="@drawable/bg_item_user_base"
+    android:gravity="center"
+    android:minHeight="@dimen/size_40"
+    android:orientation="horizontal"
+    android:paddingLeft="9dp">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="9dp"
+        android:text="昵称"
+        android:textColor="@color/day_colorPrimary"
+        android:textSize="@dimen/font_12" />
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="爱丽"
+        android:textColor="@color/tab_selected_color"
+        android:textSize="@dimen/font_12" />
+
+    <ImageView
+        android:id="@+id/img_avater"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/permission_ic_camera" />
+</LinearLayout>
