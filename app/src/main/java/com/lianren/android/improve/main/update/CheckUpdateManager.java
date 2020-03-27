@@ -7,6 +7,7 @@ import android.content.Context;
 import com.cretin.www.cretinautoupdatelibrary.model.DownloadInfo;
 import com.cretin.www.cretinautoupdatelibrary.model.TypeConfig;
 import com.cretin.www.cretinautoupdatelibrary.utils.AppUpdateUtils;
+import com.cretin.www.cretinautoupdatelibrary.utils.AppUtils;
 import com.google.gson.reflect.TypeToken;
 import com.lianren.android.api.CommonHttpResponseHandler;
 import com.lianren.android.api.remote.LRApi;
@@ -74,7 +75,7 @@ public class CheckUpdateManager {
                             //是否弹出更新
 //                            UpdateActivity.show((Activity) mContext, version);
                             DownloadInfo info = new DownloadInfo().setApkUrl(version.url)
-                                   .setProdVersionCode(Integer.parseInt(version.version))
+                                   .setProdVersionCode(AppUtils.getVersionCode(mContext)+1)
                                     .setProdVersionName(version.version)
                                     .setForceUpdateFlag(version.update_type == 1 ? 0 : 1)
                                     .setUpdateLog(version.intro);
