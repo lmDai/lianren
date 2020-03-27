@@ -90,27 +90,6 @@ public abstract class CommonHttpResponseHandler extends AsyncHttpResponseHandler
         try {
             Type type = new TypeToken<ResultBean>() {
             }.getType();
-//            if (resultBean.code == ResultBean.RESULT_SUCCESS) {
-//                onSuccess(statusCode, headers, getResponseString(responseBytes, getCharset()));
-//            } else if (resultBean.code == ResultBean.RESULT_FAIL) {
-//                onSuccess(statusCode, headers, getResponseString(responseBytes, getCharset()));
-//            } else if (resultBean.code == ResultBean.UNAUTHORIZED) {
-//                NoticeManager.clear(LRApplication.getInstance(), NoticeManager.FLAG_CLEAR_ALL);
-//                NoticeManager.exitServer(LRApplication.getInstance());
-//                NewLoginActivity.show(LRApplication.context(), getResponseString(responseBytes, getCharset()));
-//            } else if (resultBean.code == ResultBean.VIP) {
-//                BreakActivity.show(LRApplication.context(), getResponseString(responseBytes, getCharset()));
-//                NoticeManager.exitServer(LRApplication.getInstance());
-//            } else if (resultBean.code == ResultBean.REAL_NAME) {
-//                BreakActivity.show(LRApplication.context(), getResponseString(responseBytes, getCharset()));
-//                NoticeManager.exitServer(LRApplication.getInstance());
-//            } else if (resultBean.code == ResultBean.USER_INFO) {
-//                BreakActivity.show(LRApplication.context(), getResponseString(responseBytes, getCharset()));
-//                NoticeManager.exitServer(LRApplication.getInstance());
-//            } else if (resultBean.code == ResultBean.NO_HEAD) {
-//                BreakActivity.show(LRApplication.context(), getResponseString(responseBytes, getCharset()));
-//                NoticeManager.exitServer(LRApplication.getInstance());
-//            }
             ResultBean resultBean = AppOperator.createGson().fromJson(getResponseString(responseBytes, getCharset()), type);
             if (resultBean.code == ResultBean.RESULT_SUCCESS || resultBean.code == ResultBean.RESULT_FAIL) {
                 onSuccess(statusCode, headers, getResponseString(responseBytes, getCharset()));
@@ -119,7 +98,8 @@ public abstract class CommonHttpResponseHandler extends AsyncHttpResponseHandler
                 NoticeManager.exitServer(LRApplication.getInstance());
                 JPushInterface.clearAllNotifications(LRApplication.getInstance());
                 NewLoginActivity.show(LRApplication.context(), getResponseString(responseBytes, getCharset()));
-            } else {
+            } else if (resultBean.code==ResultBean.VIP||resultBean.code==ResultBean.REAL_NAME||
+                    resultBean.code==ResultBean.USER_INFO||resultBean.code==ResultBean.NO_HEAD){
                 BreakActivity.show(LRApplication.context(), getResponseString(responseBytes, getCharset()));
                 onSuccess(statusCode, headers, getResponseString(responseBytes, getCharset()));
             }

@@ -151,19 +151,13 @@ dependencies {
     //eventBus
     implementation 'org.greenrobot:eventbus:3.1.1'
     //阿里人面识别
-//    implementation(name: 'FaceLivenessOpen-2.1.6.15', ext: 'aar')
-//    implementation(name: 'NoCaptchaSDK-external-release-5.4.33', ext: 'aar')
-//    implementation(name: 'oss-android-sdk-2.9.2', ext: 'aar')
-//    implementation(name: 'rpsdk-3.0.0.5', ext: 'aar')
-//    implementation(name: 'SecurityBodySDK-external-release-5.4.79', ext: 'aar')
-//    implementation(name: 'SecurityGuardSDK-external-release-5.4.9901', ext: 'aar')
 
     implementation (name:'rpsdk-3.3.0.1', ext:'aar')
     implementation (name:'oss-android-sdk-2.9.2', ext:'aar')
     implementation (name:'SecurityBodySDK-external-release-5.4.109-preInstall', ext:'aar')
     implementation (name:'SecurityGuardSDK-external-release-5.4.187-preInstall', ext:'aar')
 
-    implementation 'com.contrarywind:Android-PickerView:+'
+    implementation 'com.contrarywind:Android-PickerView:4.1.9'
     implementation 'com.alibaba:fastjson:1.2.62'
     implementation 'com.github.limuyang2:LShadowLayout:1.0.3'
     //极光推送
@@ -174,5 +168,6 @@ dependencies {
     implementation 'org.greenrobot:greendao:3.2.2'
     //数据库升级防止丢失数据
     implementation 'io.github.yuweiguocn:GreenDaoUpgradeHelper:v2.2.1'
+    implementation 'com.github.MZCretin:AutoUpdateProject:2.0.4'
 }
 apply plugin: 'com.getkeepsafe.dexcount'

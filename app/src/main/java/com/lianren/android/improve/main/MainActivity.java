@@ -4,14 +4,12 @@ import android.Manifest;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.os.Bundle;
 import android.os.SystemClock;
 import android.provider.Settings;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.content.LocalBroadcastManager;
-import android.util.Log;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
@@ -23,7 +21,6 @@ import com.lianren.android.R;
 import com.lianren.android.Setting;
 import com.lianren.android.api.remote.LRApi;
 import com.lianren.android.base.BaseApplication;
-import com.lianren.android.basicData.db.BasicBeanDao;
 import com.lianren.android.improve.base.activities.BaseActivity;
 import com.lianren.android.improve.bean.BasicBean;
 import com.lianren.android.improve.bean.NotificationBean;
@@ -45,13 +42,9 @@ import com.lianren.android.util.DialogHelper;
 import com.lianren.android.util.greendao.DaoSessionUtils;
 import com.loopj.android.http.TextHttpResponseHandler;
 
-import org.greenrobot.greendao.query.WhereCondition;
-
 import java.lang.reflect.Type;
-import java.util.ArrayList;
 import java.util.List;
 
-import cn.jpush.android.api.JPushInterface;
 import cz.msebera.android.httpclient.Header;
 import pub.devrel.easypermissions.AfterPermissionGranted;
 import pub.devrel.easypermissions.EasyPermissions;
@@ -199,7 +192,7 @@ public class MainActivity extends BaseActivity implements NavFragment.OnNavigati
     @Override
     public void call(Version version) {
         this.mVersion = version;
-        requestExternalStorage();
+//        requestExternalStorage();
     }
 
     private static final int RC_EXTERNAL_STORAGE = 0x04;//存储权限

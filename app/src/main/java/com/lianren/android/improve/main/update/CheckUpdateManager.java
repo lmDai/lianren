@@ -4,8 +4,10 @@ import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 
+import com.cretin.www.cretinautoupdatelibrary.model.DownloadInfo;
+import com.cretin.www.cretinautoupdatelibrary.model.TypeConfig;
+import com.cretin.www.cretinautoupdatelibrary.utils.AppUpdateUtils;
 import com.google.gson.reflect.TypeToken;
-import com.lianren.android.BuildConfig;
 import com.lianren.android.api.CommonHttpResponseHandler;
 import com.lianren.android.api.remote.LRApi;
 import com.lianren.android.improve.app.AppOperator;
@@ -70,7 +72,23 @@ public class CheckUpdateManager {
                         Version version = bean.data;
                         if (version.update_type != 0) {
                             //是否弹出更新
-                            UpdateActivity.show((Activity) mContext, version);
+//                            UpdateActivity.show((Activity) mContext, version);
+                            DownloadInfo info = new DownloadInfo().setApkUrl(version.url)
+                                   .setProdVersionCode(Integer.parseInt(version.version))
+                                    .setProdVersionName(version.version)
+                                    .setForceUpdateFlag(version.update_type == 1 ? 0 : 1)
+                                    .setUpdateLog(version.intro);
+                            AppUpdateUtils.getInstance().getUpdateConfig().setUiThemeType(TypeConfig.UI_THEME_G);
+                            //打开文件MD5校验
+                            AppUpdateUtils.getInstance().getUpdateConfig().setNeedFileMD5Check(false);
+                            AppUpdateUtils.getInstance().getUpdateConfig().setDataSourceType(TypeConfig.DATA_SOURCE_TYPE_MODEL);
+                            //开启或者关闭后台静默下载功能
+                            AppUpdateUtils.getInstance().getUpdateConfig().setAutoDownloadBackground(false);
+
+                            AppUpdateUtils.getInstance().getUpdateConfig().setShowNotification(false);
+                            AppUpdateUtils.getInstance()
+                                    .checkUpdate(info);
+
                         } else {
                             if (mIsShowDialog) {
                                 DialogHelper.getMessageDialog(mContext, "已经是新版本了").show();

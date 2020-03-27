@@ -174,7 +174,7 @@ public class MoreSettingsActivity extends BackActivity implements EasyPermission
     @Override
     public void call(Version version) {
         this.mVersion = version;
-        requestExternalStorage();
+//        requestExternalStorage();
     }
 
     @SuppressLint("InlinedApi")
