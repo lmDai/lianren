@@ -4,8 +4,10 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
@@ -33,6 +35,7 @@ import com.lianren.android.util.UIHelper;
 import java.lang.reflect.Type;
 
 import butterknife.Bind;
+import butterknife.ButterKnife;
 import butterknife.OnClick;
 import cz.msebera.android.httpclient.Header;
 
@@ -44,8 +47,12 @@ import cz.msebera.android.httpclient.Header;
  **/
 public class ForgetPasswordActivity extends AccountBaseActivity implements View.OnFocusChangeListener {
     public static final String HOLD_USERNAME_KEY = "holdUsernameKey";
+    @Bind(R.id.toolbar)
+    Toolbar toolbar;
     @Bind(R.id.iv_login_logo)
     ImageView ivLoginLogo;
+    @Bind(R.id.iv_login_username_icon)
+    ImageView ivLoginUsernameIcon;
     @Bind(R.id.et_login_username)
     EditText etLoginUsername;
     @Bind(R.id.iv_login_username_del)
@@ -56,6 +63,10 @@ public class ForgetPasswordActivity extends AccountBaseActivity implements View.
     EditText etCode;
     @Bind(R.id.tv_register_sms_call)
     TextView tvRegisterSmsCall;
+    @Bind(R.id.ll_login_code)
+    LinearLayout llLoginCode;
+    @Bind(R.id.iv_login_pwd_icon)
+    ImageView ivLoginPwdIcon;
     @Bind(R.id.et_login_pwd)
     EditText etLoginPwd;
     @Bind(R.id.iv_login_pwd_del)
@@ -64,6 +75,9 @@ public class ForgetPasswordActivity extends AccountBaseActivity implements View.
     LinearLayout llLoginPwd;
     @Bind(R.id.bt_login_submit)
     Button btLoginSubmit;
+    @Bind(R.id.lay_login_container)
+    LinearLayout layLoginContainer;
+
 
     private boolean mMachPhoneNum;
     private CountDownTimer mTimer;
@@ -294,7 +308,7 @@ public class ForgetPasswordActivity extends AccountBaseActivity implements View.
 
 
     @OnClick({
-            R.id.bt_login_submit, R.id.tv_user_agent, R.id.tv_feed_back,
+            R.id.bt_login_submit,
             R.id.et_login_username, R.id.et_login_pwd, R.id.tv_register_sms_call,
             R.id.iv_login_username_del, R.id.iv_login_pwd_del,
             R.id.lay_login_container, R.id.et_code})
@@ -302,10 +316,6 @@ public class ForgetPasswordActivity extends AccountBaseActivity implements View.
         switch (view.getId()) {
             case R.id.bt_login_submit://注册
                 requestRegister();
-                break;
-            case R.id.tv_user_agent://用户协议
-                break;
-            case R.id.tv_feed_back://反馈
                 break;
             case R.id.tv_register_sms_call://获取验证码
                 requestSmsCode();
@@ -394,5 +404,12 @@ public class ForgetPasswordActivity extends AccountBaseActivity implements View.
         } else {
             AppContext.showToast(getResources().getString(R.string.register_sms_wait_hint), Toast.LENGTH_SHORT);
         }
+    }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        // TODO: add setContentView(...) invocation
+        ButterKnife.bind(this);
     }
 }
